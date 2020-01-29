@@ -44,8 +44,7 @@
             </section>
             <br />
             <section id="contact">
-                <h2>Customer information</h2>
-                <p>User information.</p>
+                <h2>Delivery information</h2>
                 <form>
                     <p>
                         <label for="fullname">Full name:</label>
@@ -63,7 +62,14 @@
                         <label for="number">House:</label>
                         <input type="number" id="number" name="nm" required="required" placeholder="House number" />
                     </p>
-
+                    <p>
+                        <label name="gender">Gender:</label><br />
+                        <input type="radio" name="gender" value="female" checked>Female<br>
+                        <input type="radio" name="gender" value="male">Male<br>
+                        <input type="radio" name="gender" value="non-binary">Non-binary<br>
+                        <input type="radio" name="gender" value="n/a">N/A
+                    </p>
+                    <button type="submit"><img width="15" src="https://p7.hiclipart.com/preview/959/696/848/check-mark-tick-clip-art-tick.jpg" /> Send Info</button>
                 </form>
             </section>
         </main>
