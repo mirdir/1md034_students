@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
 body {
     font-family: "Bebas Neue";
+    background-color: floralwhite;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+#allergy {
+    color: darkred;
+    font-weight: bold;
+}
+
+#burgers {
+    color: white;
     background-color: pink;
+}
+
+#title {
+    font-family: "Lobster";
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:hover {
+    background-color: lightgreen;
 }

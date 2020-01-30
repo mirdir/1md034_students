@@ -2,15 +2,14 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Burgers Galore</title>
+        <title>Veggie Burgers Galore</title>
         <meta charset="utf-8"/>
     </head>
     <body>
         <main>
-            <h1>Welcome to Burgers Galore</h1>
-            <section>
-                <h2>Choose your burger</h2>
-                <p>Selecting burgers</p>
+            <h1 id="title">Veggie Burgers Galore</h1>
+            <section id="burgers">
+                <h2>Choose your burger:</h2>
                     <table>
                         <thead>
                             <tr>
@@ -39,6 +38,11 @@
                                 <td width="450"><li>It'll keep you full but it won't make you happy.</li></td>
                                 <td width="520"><li>We won't be held responsible for any jaw fractures.</li></td>
                                 <td width="500"><li>At least it's low on cholesterol.</li></td>
+                            </tr>
+                            <tr>
+                                <td width="450" id="allergy"><li>Allergies: None.</li></td>
+                                <td width="520" id="allergy"><li>Allergies: Contains gluten.</li></td>
+                                <td width="500" id="allergy"><li>Allergies: Contains gluten.</li></td>
                             </tr>
                         </tbody>
                 </table>
@@ -81,7 +85,7 @@
                         <input type="radio" name="gender" value="non-binary">Non-binary<br>
                         <input type="radio" name="gender" value="n/a">N/A
                     </p>
-                    <button type="submit"><img width="15" src="https://p7.hiclipart.com/preview/959/696/848/check-mark-tick-clip-art-tick.jpg" /> Place my order!</button>
+                    <button type="submit"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
                 </form>
             </section>
         </main>
