@@ -2,15 +2,20 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Veggie Burgers Galore</title>
+        <title>Heavenly Burgers</title>
         <meta charset="utf-8"/>
     </head>
     <body>
         <main>
-            <h1 id="title">Veggie Burgers Galore</h1>
+
+            <header id="header">
+
+                <img id="headerimg" src="https://66.media.tumblr.com/d7cdcc916533e72b0e5924e8ffbae61e/tumblr_ozo7ked1g11tapwfpo6_500.png">
+                <h1 id="title">Heavenly Burgers</h1>
+            </header>
             <section id="burgers">
-                <h2>Choose your burger:</h2>
-                    <table>
+                <h2 id="title2">Choose your burger:</h2>
+                    <table id="table">
                         <thead>
                             <tr>
                                 <th width="300"><h3>The sophisticated burger</h3></th>
@@ -20,9 +25,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td width="450"><img src="https://www.theawesomegreen.com/wp-content/uploads/2014/09/Beet-Burger.jpg" alt="Image of the sophisticated burger" title="The sophisticated burger" width="385"></td>
-                                <td width="520"><img src="https://static01.nyt.com/images/2019/10/23/dining/22fakemeat1/22fakemeat1-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="Image of the greedy burger" title="The greedy burger" width="454"></td>
-                                <td width="500"><img src="https://www.theawesomegreen.com/wp-content/uploads/2016/01/Vegan-Burger.jpg" alt="Image of the dirty burger" title="The dirty burger" width="385"></td>
+                                <td width="450" id="img"><img src="https://www.theawesomegreen.com/wp-content/uploads/2014/09/Beet-Burger.jpg" alt="Image of the sophisticated burger" title="The sophisticated burger" width="385"></td>
+                                <td width="520" id="img"><img src="https://static01.nyt.com/images/2019/10/23/dining/22fakemeat1/22fakemeat1-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="Image of the greedy burger" title="The greedy burger" width="454"></td>
+                                <td width="500" id="img"><img src="https://www.theawesomegreen.com/wp-content/uploads/2016/01/Vegan-Burger.jpg" alt="Image of the dirty burger" title="The dirty burger" width="385"></td>
                             </tr>
                             <tr>
                                 <td width="450"><li>A beautiful burger for all my fancy pants out there.</li></td>
@@ -78,18 +83,17 @@
                             <option>Cash to deliverer</option>
                         </select>
                     </p>
-                    <p>
+                    <p id="radio">
                         <label name="gender">Gender:</label><br />
                         <input type="radio" name="gender" value="female" checked>Female<br>
                         <input type="radio" name="gender" value="male">Male<br>
                         <input type="radio" name="gender" value="non-binary">Non-binary<br>
                         <input type="radio" name="gender" value="n/a">N/A
                     </p>
-                    <button type="submit"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
+                    <button id="button" type="submit"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
                 </form>
             </section>
         </main>
-        <br />
         <hr>
         <footer>© 2020 Hypothetical burgers Inc.</footer>
     </body>
