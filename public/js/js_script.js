@@ -11,16 +11,16 @@ function getNameKcal(menuItem) {
 }
 
 let soph = new menuItem("The sophisticated burger", "None", "400", "https://www.theawesomegreen.com/wp-content/uploads/2014/09/Beet-Burger.jpg");
-console.log(getNameKcal(soph));
+document.getElementById("b1").innerHTML = getNameKcal(soph);
 
 let greedy = new menuItem("The greedy burger", "Gluten", "1500", "https://static01.nyt.com/images/2019/10/23/dining/22fakemeat1/22fakemeat1-articleLarge.jpg?quality=75&auto=webp&disable=upscale");
-console.log(getNameKcal(greedy));
+document.getElementById("b2").innerHTML = getNameKcal(greedy);
 
 let dirty = new menuItem("The dirty burger", "Gluten", "3000", "https://www.theawesomegreen.com/wp-content/uploads/2016/01/Vegan-Burger.jpg");
-console.log(getNameKcal(dirty));
+document.getElementById("b3").innerHTML = getNameKcal(dirty);
 
 let randomBurger1 = new menuItem("Random burger 1", "None", "1000", "picture missing");
-console.log(getNameKcal(randomBurger1));
+document.getElementById("b4").innerHTML = getNameKcal(randomBurger1);
 
 let randomBurger2 = new menuItem("Random burger 2", "None", "1000", "picture missing");
-console.log(getNameKcal(randomBurger2));
+document.getElementById("b5").innerHTML = getNameKcal(randomBurger2);
