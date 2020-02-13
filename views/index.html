@@ -4,8 +4,8 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Heavenly Burgers</title>
         <meta charset="utf-8"/>
-        <script src="js/js_script.js"></script>
-        <script src="js/vue_script.js"></script>
+        <script src="js/js_script.js" defer></script>
+        <script src="js/vue_script.js" defer></script>
         <script src="https://vuejs.org/js/vue.js"></script>
     </head>
     <body>
@@ -18,16 +18,27 @@
             </header>
             <section id="burgers">
                 <h2 id="title2">Choose your burger:</h2>
-                    <div class="wrapper">
-                        <div class=c1>
+                    <div class="wrapper" id="wrapperID">
+                        <div class="burger">
+                        </div>
+                        <div class="burger">
+                        </div>
+                        <div class="burger">
+                        </div>
+                        <div class="burger">
+                        </div>
+                        <div class="burger">
+                        </div>
+                      <!--
+                        <div class="c1">
                             <th width="300" id="title3"><h3>The sophisticated burger</h3></th>
                             <td width="450" id="img"><img src="https://www.theawesomegreen.com/wp-content/uploads/2014/09/Beet-Burger.jpg" alt="Image of the sophisticated burger" title="The sophisticated burger" width="385"></td>
                         </div>
-                        <div class=c2>
+                        <div class="c2">
                             <th width="300" id="title3"><h3>The greedy burger</h3></th>
                             <td width="520" id="img"><img src="https://static01.nyt.com/images/2019/10/23/dining/22fakemeat1/22fakemeat1-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="Image of the greedy burger" title="The greedy burger" width="454"></td>
                         </div>
-                        <div class=c3>
+                        <div class="c3">
                             <th width="300" id="title3"><h3>The dirty burger</h3></th>
                             <td width="500" id="img"><img src="https://www.theawesomegreen.com/wp-content/uploads/2016/01/Vegan-Burger.jpg" alt="Image of the dirty burger" title="The dirty burger" width="385"></td>
                         </div>
@@ -52,6 +63,7 @@
                             <td width="500" id="allergy"><li>Allergies: Contains gluten.</li></td>
                             <td width="450"><li>Calories: 3000 kCal</li></td>
                         </div>
+                      -->
                     </div>
             </section>
             <br />
