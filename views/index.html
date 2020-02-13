@@ -19,6 +19,19 @@
             <section id="burgers">
                 <h2 id="title2">Choose your burger:</h2>
                     <div class="wrapper" id="wrapperID">
+                      <div  v-for="item in menu">
+                        <h3>{{ item.name }}</h3>
+                        <img v-bind:src="item.path" width="400">
+                        <ul>
+                          <li>{{ item.d1 }}</li>
+                          <li>{{ item.d2 }}</li>
+                          <li>{{ item.d3 }}</li>
+                          <li v-if="item.gluten == true">Allergies: Gluten.</li>
+                          <li v-if="item.gluten == false">Allergies: None.</li>
+                          <li>{{ item.calories }} kCal.</li>
+                        </ul>
+                      </div>
+                        <!--
                         <div class="burger">
                         </div>
                         <div class="burger">
@@ -29,6 +42,7 @@
                         </div>
                         <div class="burger">
                         </div>
+                        -->
                       <!--
                         <div class="c1">
                             <th width="300" id="title3"><h3>The sophisticated burger</h3></th>

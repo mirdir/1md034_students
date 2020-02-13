@@ -27,7 +27,7 @@ let randomBurger1 = new menuItem("Random burger 1", "d1", "d2", "d3", false, "10
 
 let randomBurger2 = new menuItem("Random burger 2", "d1", "d2", "d3", false, "1000", "https://www.pinclipart.com/picdir/big/13-132538_burger-svg-png-icon-free-download-545640-clip.png");
 //document.getElementById("b5").innerHTML = getNameKcal(randomBurger2);
-
+/*
 menu = [soph, greedy, dirty, randomBurger1, randomBurger2];
 
 let burgerElem = document.getElementsByClassName("burger");
@@ -79,6 +79,5 @@ for (let i = 0; i < burgerElem.length; i++) {
   desc3.appendChild(d3);
   gluten.appendChild(glut);
   calories.appendChild(cal);
-
-
 }
+*/
