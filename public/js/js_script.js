@@ -24,3 +24,13 @@ document.getElementById("b4").innerHTML = getNameKcal(randomBurger1);
 
 let randomBurger2 = new menuItem("Random burger 2", "None", "1000", "picture missing");
 document.getElementById("b5").innerHTML = getNameKcal(randomBurger2);
+
+menu = [soph, greedy, dirty, randomBurger1, randomBurger2];
+
+let element = document.getElementById("menuID");
+for (let item of menu) {
+	let listLine = document.createElement("li");
+  let listText = document.createTextNode(item.burger);
+  listLine.appendChild(listText);
+  element.appendChild(listLine);
+}
