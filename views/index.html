@@ -19,9 +19,9 @@
             <section id="burgers">
                 <h2 id="title2">Choose your burger:</h2>
                     <div class="wrapper" id="wrapperID">
-                      <div  v-for="item in menu">
-                        <h3>{{ item.name }}</h3>
-                        <img v-bind:src="item.path" width="400">
+                      <div v-for="item in menu">
+                        <h3 id="title2">{{ item.name }}</h3>
+                        <p id="image"><img v-bind:src="item.path" height="400"></p>
                         <ul>
                           <li>{{ item.d1 }}</li>
                           <li>{{ item.d2 }}</li>
