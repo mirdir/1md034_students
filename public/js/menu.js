@@ -1,0 +1,47 @@
+let food = [
+  {
+    "name": "The sophisticated burger",
+    "d1": "A beautiful burger for all my fancy pants out there.",
+    "d2": "It's even gluten free n shit.",
+    "d3": "It'll keep you full but it won't make you happy.",
+    "gluten": false,
+    "calories": 400,
+    "path": "https://www.theawesomegreen.com/wp-content/uploads/2014/09/Beet-Burger.jpg",
+  },
+  {
+    "name": "The greedy burger",
+    "d1": "A thicc burger for all you protein deficient vegans.",
+    "d2": "Will fill that big black hole of emptiness inside you and then some.",
+    "d3": "We won't be held responsible for any jaw fractures.",
+    "gluten": true,
+    "calories": 1500,
+    "path": "https://static01.nyt.com/images/2019/10/23/dining/22fakemeat1/22fakemeat1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+  },
+  {
+    "name": "The dirty burger",
+    "d1": "A filthy burger with too much mayo for when you're feeling nasty.",
+    "d2": "Seriously this one is gross, don't eat it if you're having a good day.",
+    "d3": "At least it's low on cholesterol.",
+    "gluten": true,
+    "calories": 3000,
+    "path": "https://www.theawesomegreen.com/wp-content/uploads/2016/01/Vegan-Burger.jpg",
+  },
+  {
+    "name": "Untitled 1",
+    "d1": "[description 1]",
+    "d2": "[description 2]",
+    "d3": "[description 3]",
+    "gluten": true,
+    "calories": 0,
+    "path": "https://www.pinclipart.com/picdir/big/13-132538_burger-svg-png-icon-free-download-545640-clip.png",
+  },
+  {
+    "name": "Untitled 2",
+    "d1": "[description 1]",
+    "d2": "[description 2]",
+    "d3": "[description 3]",
+    "gluten": true,
+    "calories": 0,
+    "path": "https://www.pinclipart.com/picdir/big/13-132538_burger-svg-png-icon-free-download-545640-clip.png",
+  }
+]
