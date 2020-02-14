@@ -10,7 +10,7 @@
         <script src="https://vuejs.org/js/vue.js"></script>
     </head>
     <body>
-        <main>
+        <main id="main">
 
             <header id="header">
 
@@ -31,6 +31,8 @@
                           <li v-if="item.gluten == false">Allergies: None.</li>
                           <li>{{ item.calories }} kCal.</li>
                         </ul>
+                        <label for="choose">Buy this burger!</label>
+                        <input type="checkbox" id="choose" :value="item.name" v-model="checkedBurgers">
                       </div>
                         <!--
                         <div class="burger">
@@ -88,23 +90,27 @@
 
                     <p>
                         <label for="fullname">Full name:</label>
-                        <input type="text" id="fullname" name="fn" required="required" placeholder="First- and lastname" />
+                        <input v-model="nameInput" type="text" id="fullname" name="fn" required="required" placeholder="First- and lastname" />
+
                     </p>
                     <p>
                         <label for="email">E-mail:<label>
-                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+                        <input v-model="emailInput" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+
                     </p>
                     <p>
                         <label for="street">Street:</label>
-                        <input type="text" id="street" name="st" required="required" placeholder="Street name" />
+                        <input v-model="streetInput" type="text" id="street" name="st" required="required" placeholder="Street name" />
+
                     </p>
                     <p>
                         <label for="number">House:</label>
-                        <input type="number" id="number" name="nm" required="required" placeholder="House number" />
+                        <input v-model="numberInput" type="number" id="number" name="nm" required="required" placeholder="House number" />
+
                     </p>
                     <p>
                         <label for="payment">Payment information:</label><br />
-                        <select id="payment" name="pay">
+                        <select v-model="paymentInput" id="payment" name="pay">
                             <option>Credit card</option>
                             <option>Paypal</option>
                             <option>Invoice</option>
@@ -114,13 +120,14 @@
                     </p>
                     <p id="radio">
                         <label name="gender">Gender:</label><br />
-                        <input type="radio" name="gender" value="female" checked>Female<br>
-                        <input type="radio" name="gender" value="male">Male<br>
-                        <input type="radio" name="gender" value="non-binary">Non-binary<br>
-                        <input type="radio" name="gender" value="n/a">N/A
+                        <input v-model="radioOption" type="radio" name="gender" value="female" checked>Female<br>
+                        <input v-model="radioOption" type="radio" name="gender" value="male">Male<br>
+                        <input v-model="radioOption" type="radio" name="gender" value="non-binary">Non-binary<br>
+                        <input v-model="radioOption" type="radio" name="gender" value="n/a">N/A
                     </p>
-                    <button id="button" type="submit"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
+                    <button v-on:click="func()" id="button" type="button"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
                 </form>
+                <p> {{ array }} </p>
             </section>
         </main>
         <hr>

@@ -1,4 +1,25 @@
+
 /*
+let orderButton = document.getElementById("button");
+
+var fullName = document.getElementById("fullname").value;
+var email = document.getElementById("email").value;
+var street = document.getElementById("street").value;
+var number = document.getElementById("number").value;
+var payment = document.getElementById("payment").value;
+var radio = document.getElementById("radio").value;
+
+let info = [fullName, email, street, number, payment];
+
+function functionName() {
+  console.log(info);
+}
+
+orderButton.addEventListener("click", functionName);*/
+//[document.getElementById("fullname").value, document.getElementById("email").value, document.getElementById("street").value, document.getElementById("number").value, document.getElementById("payment").value, document.getElementsByName("radio").checked]
+
+/*
+
 function menuItem(name, d1, d2, d3, gluten, cal, path) {
   this.name = name;
   this.d1 = d1;
