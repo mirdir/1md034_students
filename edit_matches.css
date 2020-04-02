@@ -1,0 +1,52 @@
+.name_block {
+  width: 120px;
+  background-color: #67147a;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ }
+
+.name_block:hover {
+  background-color: #cf2af5; /* Green */
+  color: black;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.name {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  vertical-align: center;
+  color: black;
+}
+
+.empty_block {
+  width: 120px;
+  background-color: #ffffff;
+  border-radius: 12px;
+ }
+
+
+#columns {
+    width: 900px;
+    border: 4px solid #000000;
+    overflow: auto;
+}
+
+
+#list_column{
+    float: left;
+    border: 4px solid #ffffff;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#person_two {
+    width: 170px;
+    float: right;
+}
+
+#person_one {
+    width: 170px;
+    float: right;
+}

@@ -7,10 +7,14 @@
          <script type="text/javascript" src="js/menu.js" defer></script>
         <script src="js/js_script.js" defer></script>
         <script src="js/vue_script.js" defer></script>
+        <script src="/socket.io/socket.io.js" defer></script>
         <script src="https://vuejs.org/js/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
     </head>
     <body>
         <main id="main">
+            <section id="all">
 
             <header id="header">
 
@@ -98,6 +102,7 @@
                         <input v-model="emailInput" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
 
                     </p>
+                    <!--
                     <p>
                         <label for="street">Street:</label>
                         <input v-model="streetInput" type="text" id="street" name="st" required="required" placeholder="Street name" />
@@ -108,6 +113,7 @@
                         <input v-model="numberInput" type="number" id="number" name="nm" required="required" placeholder="House number" />
 
                     </p>
+                -->
                     <p>
                         <label for="payment">Payment information:</label><br />
                         <select v-model="paymentInput" id="payment" name="pay">
@@ -125,10 +131,25 @@
                         <input v-model="radioOption" type="radio" name="gender" value="non-binary">Non-binary<br>
                         <input v-model="radioOption" type="radio" name="gender" value="n/a">N/A
                     </p>
+                    <p>
+                        <h1> Click in the map! </h1>
+                        <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+                        <div class="view-box">
+                          <div id="dots" v-on:click="addOrder">
+                              <div 
+                                v-for="(order, key) in orders"
+                                v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                                {{key}}
+                              </div>
+                          </div>
+                        </div>
+                    </p>
+
                     <button v-on:click="func()" id="button" type="button"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
                 </form>
                 <p> {{ array }} </p>
             </section>
+        </section>
         </main>
         <hr>
         <footer>© 2020 Hypothetical burgers Inc.</footer>
