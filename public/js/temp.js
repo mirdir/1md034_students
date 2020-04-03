@@ -7,16 +7,16 @@ const socket = io();
 const vm = new Vue({
   el: '#main',
   data: {
-    nameInput: "",
-    emailInput: "",
+      nameInput: "",
+      emailInput: "",
     //streetInput: "",
-    //numberInput: "",
-    paymentInput: "Credit card",
-    radioOption: "female",
-    array: "",
-    orders: {},
-    food,
-    checkedBurgers: [],
+      //numberInput: "",
+      paymentInput: "Credit card",
+      radioOption: "female",
+      array: "",
+      orders: {},
+      food,
+      checkedBurgers: [],
   },
     func: function() {
       //console.log("hej")
@@ -68,6 +68,5 @@ const vm = new Vue({
           orderItems: ['Beans', 'Curry'],
         });
       },
-    
-  },
+    },
 });
