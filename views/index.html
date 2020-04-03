@@ -137,17 +137,16 @@
                         <div class="view-box">
                           <div id="dots" v-on:click="displayOrder">
                               <div 
-                                v-for="(order, key) in orders"
+                                v-if="order.showT"
                                 v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                                {{key}}
+                                T
                               </div>
                           </div>
                         </div>
                     </p>
 
-                    <button v-on:click="func()" id="button" type="button"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
+                    <button v-on:click="addOrder" id="button" type="button"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
                 </form>
-                <p> {{ array }} </p>
             </section>
         </section>
         </main>

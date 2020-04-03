@@ -15,7 +15,11 @@ const vm = new Vue({
     radioOption: "female",
     array: "",
     orders: {},
-    order: {details: {x: 0, y: 0},},
+    order: {
+      details: {x: 0, y: 0},
+      showT: false,
+    },
+    integer: 0,
     food,
     checkedBurgers: [],
   },
@@ -23,30 +27,19 @@ const vm = new Vue({
       //console.log("hej")
       this.array = this.nameInput + this.emailInput /*+ this.streetInput + this.numberInput */+ this.paymentInput + this.radioOption + this.checkedBurgers
     },
-    created: function() {
-      socket.on('initialize', function(data) {
-        this.orders = data.orders;
-      }.bind(this));
-      socket.on('currentQueue', function(data) {
-        this.orders = data.orders;
-      }.bind(this));
-    },
     methods: {
       getNext: function() {
-        let lastOrder = Object.keys(this.orders).reduce(function(last, next) {
-          return Math.max(last, next);
-        }, 0);
-        return lastOrder + 1;
+        return this.integer + 1;
       },
       addOrder: function(event) {
-        
+        this.array = this.nameInput + this.emailInput /*+ this.streetInput + this.numberInput */+ this.paymentInput + this.radioOption + this.checkedBurgers
         socket.emit('addOrder', {
           orderId: this.getNext(),
           details: {
-            x: event.clientX - 10 - offset.x,
-            y: event.clientY - 10 - offset.y,
+            x: this.order.details.x,
+            y: this.order.details.y,
           },
-          orderItems: ['Beans', 'Curry'],
+          orderItems: [this.checkedBurgers],
         });
       },
       displayOrder: function(event) {
@@ -55,7 +48,8 @@ const vm = new Vue({
           y: event.currentTarget.getBoundingClientRect().top,
         };
         this.order.details.x = event.clientX - 10 - offset.x,
-        this.order.details.y = event.clientY - 10 - offset.y,    
+        this.order.details.y = event.clientY - 10 - offset.y,
+        this.order.showT = true    
       }
     
     },
