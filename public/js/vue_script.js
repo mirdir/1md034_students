@@ -9,8 +9,6 @@ const vm = new Vue({
   data: {
     nameInput: "",
     emailInput: "",
-    //streetInput: "",
-    //numberInput: "",
     paymentInput: "Credit card",
     radioOption: "female",
     array: "",
@@ -19,28 +17,29 @@ const vm = new Vue({
       details: {x: 0, y: 0},
       showT: false,
     },
-    integer: 0,
+    integ: 1,
     food,
     checkedBurgers: [],
+    customerInfo: [],
+    orderConfirmation: false,
   },
-    func: function() {
-      //console.log("hej")
-      this.array = this.nameInput + this.emailInput /*+ this.streetInput + this.numberInput */+ this.paymentInput + this.radioOption + this.checkedBurgers
-    },
     methods: {
       getNext: function() {
-        return this.integer + 1;
+        return this.integ++;
       },
       addOrder: function(event) {
-        this.array = this.nameInput + this.emailInput /*+ this.streetInput + this.numberInput */+ this.paymentInput + this.radioOption + this.checkedBurgers
+        this.orderConfirmation = true
         socket.emit('addOrder', {
           orderId: this.getNext(),
           details: {
             x: this.order.details.x,
             y: this.order.details.y,
           },
-          orderItems: [this.checkedBurgers],
+          orderItems: [this.checkedBurgers.join(", ")],
+          customerInfo: "Name: " + this.nameInput + ", Email: " + this.emailInput + ", Payment method: " + this.paymentInput + ", Gender: " + this.radioOption,
+          
         });
+        
       },
       displayOrder: function(event) {
         let offset = {

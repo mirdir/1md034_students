@@ -36,7 +36,7 @@
                           <li>{{ item.calories }} kCal.</li>
                         </ul>
                         <label for="choose">Buy this burger!</label>
-                        <input type="checkbox" id="choose" :value="item.name" v-model="checkedBurgers">
+                        <input type="checkbox" id="choose" :value="item.name" v-model="checkedBurgers" required>
                       </div>
                         <!--
                         <div class="burger">
@@ -94,12 +94,12 @@
 
                     <p>
                         <label for="fullname">Full name:</label>
-                        <input v-model="nameInput" type="text" id="fullname" name="fn" required="required" placeholder="First- and lastname" />
+                        <input v-model="nameInput" type="text" id="fullname" name="fn" required="required" placeholder="First- and lastname" required>
 
                     </p>
                     <p>
                         <label for="email">E-mail:<label>
-                        <input v-model="emailInput" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+                        <input v-model="emailInput" type="email" id="email" name="em" required="required" placeholder="E-mail address" required>
 
                     </p>
                     <!--
@@ -147,6 +147,22 @@
 
                     <button v-on:click="addOrder" id="button" type="button"><img width="15" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Vegetarian.svg" /> Place my order!</button>
                 </form>
+                
+                    
+                    <div v-if="orderConfirmation">
+                        <h2>Order confirmation</h2>
+                        <h3>Customer details:</h3>
+                        Name: {{ nameInput }} <br>
+                        Email: {{ emailInput }} <br>
+                        Payment: {{ paymentInput }} <br>
+                        Gender: {{ radioOption }} <br>
+                        <h3>Order summary:</h3>
+                        <div v-for="burger in checkedBurgers">
+                        {{ burger }} <br>
+                        </div>
+                    </div>
+                
+                
             </section>
         </section>
         </main>
